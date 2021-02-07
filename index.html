@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ServeR</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>ServeR</span>
+    </div>
+    <div id="top_nav">
+      <a href="#" onclick="slowScroll('#conf')" title="Конфигурация">Конфигурация</a>
+      <a href="#" onclick="slowScroll('#soft')" title="Программное обеспечение">Программное обеспечение</a>
+      <a href="#" onclick="slowScroll('#documets')" title="Документация">Документация</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <center><h1>ОБРАЩАЮ ВАШЕ ВНИМАНИЕ</h1></center>
+    <h2>ЗАГРУЗКА ЗАПРЕЩЕНЫХ ФАЙЛОВ КАРАЕТСЯ</h2>
+     <h3>введением анального зонтика!!!</h3>
+  </div>
+<div id="conf">
+    <center><h2>Конфигурация</h2></center>
+      
+  </div>
+    <div id="soft">
+    <center><h2>Программное обеспечение</h2></center>
+        </div>
+  </div>
+  <div id="documets">
+    <h2>Данная документация</h2>
+    <h4>предоставлена для общего пользования</h4>
+
+    <div class="img">
+      <img src="images/Техническая.jpg" alt="">
+      <span>Техническая документация</span>
+    </div>
+    <div class="img">
+      <img src="images/Справочная.jpg" alt="">
+      <span>Справочная документация</span>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
